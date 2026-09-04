@@ -1,8 +1,6 @@
 'use strict';
 
-/* ────────────────────────────────────────────────────────────
-   1. PARTICLE BACKGROUND
-   ──────────────────────────────────────────────────────────── */
+// 1. PARTICLE BACKGROUND
 (function initParticles() {
   const canvas = document.getElementById('particles');
   if (!canvas) return;
@@ -72,9 +70,7 @@
 })();
 
 
-/* ────────────────────────────────────────────────────────────
-   2. CURSOR GLOW
-   ──────────────────────────────────────────────────────────── */
+//2. CURSOR GLOW
 (function initCursor() {
   const glow = document.getElementById('cursorGlow');
   if (!glow) return;
@@ -93,9 +89,7 @@
 })();
 
 
-/* ────────────────────────────────────────────────────────────
-   3. NAVBAR SCROLL + ACTIVE LINKS
-   ──────────────────────────────────────────────────────────── */
+//3. NAVBAR SCROLL + ACTIVE LINKS
 (function initNavbar() {
   const navbar = document.getElementById('navbar');
   const links  = document.querySelectorAll('.nav-link');
@@ -121,9 +115,7 @@
 })();
 
 
-/* ────────────────────────────────────────────────────────────
-   4. HAMBURGER MENU
-   ──────────────────────────────────────────────────────────── */
+// 4. HAMBURGER MENU
 (function initHamburger() {
   const btn   = document.getElementById('hamburger');
   const links = document.getElementById('navLinks');
@@ -154,9 +146,8 @@
 })();
 
 
-/* ────────────────────────────────────────────────────────────
-   5. TYPEWRITER EFFECT
-   ──────────────────────────────────────────────────────────── */
+
+//   5. TYPEWRITER EFFECT
 (function initTypewriter() {
   const el = document.getElementById('typewriter');
   if (!el) return;
@@ -183,9 +174,8 @@
 })();
 
 
-/* ────────────────────────────────────────────────────────────
-   6. SCROLL REVEAL
-   ──────────────────────────────────────────────────────────── */
+
+//   6. SCROLL REVEAL
 (function initReveal() {
   const els = document.querySelectorAll('.reveal');
   if (!els.length) return;
@@ -206,9 +196,7 @@
 })();
 
 
-/* ────────────────────────────────────────────────────────────
-   7. SKILLS TABS
-   ──────────────────────────────────────────────────────────── */
+// 7. SKILLS TABS
 (function initTabs() {
   const btns   = document.querySelectorAll('.tab-btn');
   const panels = document.querySelectorAll('.skills-panel');
@@ -244,9 +232,8 @@
 })();
 
 
-/* ────────────────────────────────────────────────────────────
-   8. CONTACT FORM (demo — opens mailto)
-   ──────────────────────────────────────────────────────────── */
+
+// 8. CONTACT FORM (demo — opens mailto)
 (function initForm() {
   const form     = document.getElementById('contactForm');
   const feedback = document.getElementById('formFeedback');
@@ -268,7 +255,7 @@
     const mailto = `mailto:Mahmoudandelsamed@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
     window.location.href = mailto;
 
-    feedback.textContent = '✅ Opening your email client…';
+    feedback.textContent = ' Opening your email client…';
     feedback.className   = 'form-feedback success';
     form.reset();
     setTimeout(() => { feedback.textContent = ''; feedback.className = 'form-feedback'; }, 5000);
@@ -276,9 +263,9 @@
 })();
 
 
-/* ────────────────────────────────────────────────────────────
-   9. SMOOTH SCROLL FOR ALL INTERNAL LINKS
-   ──────────────────────────────────────────────────────────── */
+
+// 9. SMOOTH SCROLL FOR ALL INTERNAL LINKS
+
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
@@ -289,9 +276,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 
-/* ────────────────────────────────────────────────────────────
-   10. SECTION ENTRANCE TILT (subtle 3D on cards)
-   ──────────────────────────────────────────────────────────── */
+
+// 10. SECTION ENTRANCE TILT (subtle 3D on cards)
 (function initTilt() {
   document.querySelectorAll('.project-card, .info-card, .tl-card').forEach(card => {
     card.addEventListener('mousemove', e => {
