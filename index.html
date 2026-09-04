@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mahmoud Abdel-Samed — Back-End .NET Developer specializing in scalable systems, clean architecture, and robust APIs. Explore projects and skills." />
+  <title>Mahmoud Abdel-Samed · .NET Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/response.css" />
+</head>
+<body>
+
+  <!-- ──────────────── CURSOR GLOW ──────────────── -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ──────────────── PARTICLE BG ──────────────── -->
+  <canvas id="particles"></canvas>
+
+  <!-- ──────────────── NAVBAR ──────────────── -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">M<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#timeline" class="nav-link">Journey</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="assets/CV/MahmoudA25.pdf" download class="btn-primary nav-cta">Download CV <i class="fa-solid fa-download"></i></a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ──────────────── HERO ──────────────── -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-badge"><span class="badge-dot"></span> Available for opportunities</div>
+      <h1 class="hero-title">
+        <span class="line">Hi, I'm <strong>Mahmoud</strong></span>
+        <span class="line typewriter" id="typewriter"></span>
+      </h1>
+      <p class="hero-desc">
+        Back-End .NET Developer focused on crafting scalable systems,<br />
+        clean architectures, and high-performance APIs.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects <span>→</span></a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">7+</span><span class="stat-label">Projects Built</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-num">25+</span><span class="stat-label">Technologies</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><span class="stat-num">Clean</span><span class="stat-label">Architecture First</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <img src="assets/images/me.jpeg" alt="Mahmoud Abdel-Samed" class="avatar-photo" />
+        </div>
+        <div class="orbit orbit-1"><div class="orbit-dot dot-c"></div></div>
+        <div class="orbit orbit-2"><div class="orbit-dot dot-js"></div></div>
+        <div class="orbit orbit-3"><div class="orbit-dot dot-db"></div></div>
+      </div>
+      <div class="floating-card card-net">
+        <span class="fc-icon"><i class="fa-solid fa-bolt-lightning"></i></span>
+        <div><strong>.NET 8</strong><small>ASP.NET Core</small></div>
+      </div>
+      <div class="floating-card card-arch">
+      <i class="fa-solid fa-cubes"></i><span class="fc-icon"></span>
+        <div><strong>Clean Arch</strong><small>SOLID Principles</small></div>
+      </div>
+      <div class="floating-card card-db">
+        <span class="fc-icon"><i class="fa-solid fa-database"></i></span>
+        <div><strong>SQL Server</strong><small>EF Core + LINQ</small></div>
+      </div>
+    </div>
+    <div class="scroll-hint"><span></span><small>Scroll Down</small></div>
+  </section>
+
+  <!-- ──────────────── ABOUT ──────────────── -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-label">01 — Who I Am</div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 class="section-title">Crafting Robust &amp;<br /><span class="gradient-text">Scalable Systems</span></h2>
+          <p>I'm a Computer Science graduate and Back-End .NET Developer from Egypt, passionate about building secure, high-performance web applications that solve real business problems.</p>
+          <p>My design philosophy centers around <strong>Clean Architecture</strong>, <strong>SOLID principles</strong>, and writing highly optimized database queries. I love tackling complex structural challenges and configuring high-throughput Web APIs.</p>
+          <p>While not coding, I enjoy learning about SaaS businesses and playing football.</p>
+          <div class="about-tags">
+            <span class="tag">Egypt 🇪🇬</span>
+            <span class="tag">Computer Science B.Sc.</span>
+            <span class="tag">El Shorouk Academy</span>
+            <span class="tag">Open to Work</span>
+          </div>
+          <div class="about-actions">
+            <a href="#contact" class="btn-primary">Hire Me</a>
+            <a href="#contact" class="btn-ghost">Send Email</a>
+          </div>
+        </div>
+                      <div class="about-cards reveal">
+  <div class="info-card glass">
+    <div class="info-card-icon">
+      <!-- 🎓 -->
+      <i class="fa-solid fa-graduation-cap"></i>
+    </div>
+    <div>
+      <strong>Education</strong>
+      <p>B.Sc. Computer Science<br/><small>El Shorouk Academy, 2023–2027</small></p>
+    </div>
+  </div>
+
+  <div class="info-card glass">
+    <div class="info-card-icon">
+      <!-- 💼 -->
+      <i class="fa-solid fa-bag-shopping"></i>
+    </div>
+    <div>
+      <strong>Focus Area</strong>
+      <p>Back-End .NET Development<br/><small>APIs · Architecture · Databases</small></p>
+    </div>
+  </div>
+
+  <div class="info-card glass">
+    <div class="info-card-icon">
+      <!-- 🚀 -->
+      <i class="fa-solid fa-rocket"></i>
+    </div>
+    <div>
+      <strong>Currently</strong>
+      <p>Building Scalable Systems<br/><small>CQRS · MediatR · SignalR · Docker</small></p>
+    </div>
+  </div>
+
+  
+  <div class="info-card glass">
+    <div class="info-card-icon">
+      <!-- 🛠️ -->
+      <i class="fa-solid fa-layer-group"></i>
+    </div>
+    <div>
+      <strong>Core Stack</strong>
+      <p>Backend & Databases<br/><small>C# · .NET 8 · EF Core · SQL Server · Redis</small></p>
+    </div>
+  </div>
+  
+  <div class="info-card glass">
+    <div class="info-card-icon">
+      <!-- 🧩 -->
+      <i class="fa-solid fa-cubes"></i>
+    </div>
+    <div>
+      <strong>Architecture</strong>
+      <p>Design & Patterns<br/><small>Clean Arch · SOLID · Microservices · REST APIs</small></p>
+    </div>
+  </div>
+  <div class="info-card glass">
+    <div class="info-card-icon">
+      <!-- ✉️ -->
+      <i class="fa-solid fa-envelope"></i>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <p>Mahmoudandelsamed<br/><small>@gmail.com</small></p>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── SKILLS ──────────────── -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-label">02 — What I Know</div>
+      <h2 class="section-title text-center">Tech <span class="gradient-text">Stack</span></h2>
+      <p class="section-sub text-center">Skills I use to build production-ready backend systems</p>
+
+      <div class="skills-tabs" id="skillsTabs">
+        <button class="tab-btn active" data-tab="backend">Backend</button>
+        <button class="tab-btn" data-tab="database">Database</button>
+        <button class="tab-btn" data-tab="architecture">Architecture</button>
+        <button class="tab-btn" data-tab="devops">DevOps & Tools</button>
+        <button class="tab-btn" data-tab="frontend">Frontend</button>
+      </div>
+
+      <div class="skills-panels">
+        <!-- BACKEND -->
+        <div class="skills-panel active reveal" id="tab-backend">
+          <div class="skills-grid">
+            <div class="skill-card glass"><div class="sk-icon sk-purple">C#</div><div class="sk-info"><span>C# (.NET)</span><div class="sk-bar"><div class="sk-fill" style="--w:95%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-blue">.NET</div><div class="sk-info"><span>.NET 8 / Core</span><div class="sk-bar"><div class="sk-fill" style="--w:90%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-cyan">API</div><div class="sk-info"><span>ASP.NET Core</span><div class="sk-bar"><div class="sk-fill" style="--w:90%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-purple">EF</div><div class="sk-info"><span>Entity Framework Core</span><div class="sk-bar"><div class="sk-fill" style="--w:88%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-blue">JWT</div><div class="sk-info"><span>Auth / JWT</span><div class="sk-bar"><div class="sk-fill" style="--w:85%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-cyan">SR</div><div class="sk-info"><span>SignalR</span><div class="sk-bar"><div class="sk-fill" style="--w:70%"></div></div><small>Intermediate</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-purple">HF</div><div class="sk-info"><span>Hangfire</span><div class="sk-bar"><div class="sk-fill" style="--w:65%"></div></div><small>Intermediate</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-blue">LQ</div><div class="sk-info"><span>LINQ</span><div class="sk-bar"><div class="sk-fill" style="--w:90%"></div></div><small>Advanced</small></div></div>
+          </div>
+        </div>
+        <!-- DATABASE -->
+        <div class="skills-panel reveal" id="tab-database">
+          <div class="skills-grid">
+            <div class="skill-card glass"><div class="sk-icon sk-purple">SQL</div><div class="sk-info"><span>SQL Server</span><div class="sk-bar"><div class="sk-fill" style="--w:90%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-blue">PG</div><div class="sk-info"><span>PostgreSQL</span><div class="sk-bar"><div class="sk-fill" style="--w:70%"></div></div><small>Intermediate</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-cyan">SB</div><div class="sk-info"><span>Supabase</span><div class="sk-bar"><div class="sk-fill" style="--w:68%"></div></div><small>Intermediate</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-purple">LQ</div><div class="sk-info"><span>LINQ Queries</span><div class="sk-bar"><div class="sk-fill" style="--w:88%"></div></div><small>Advanced</small></div></div>
+          </div>
+        </div>
+        <!-- ARCHITECTURE -->
+        <div class="skills-panel reveal" id="tab-architecture">
+          <div class="skills-grid">
+            <div class="skill-card glass"><div class="sk-icon sk-cyan">CA</div><div class="sk-info"><span>Clean Architecture</span><div class="sk-bar"><div class="sk-fill" style="--w:88%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-purple">DI</div><div class="sk-info"><span>Dependency Injection</span><div class="sk-bar"><div class="sk-fill" style="--w:90%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-blue">DP</div><div class="sk-info"><span>Design Patterns</span><div class="sk-bar"><div class="sk-fill" style="--w:72%"></div></div><small>Intermediate</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-cyan">REST</div><div class="sk-info"><span>RESTful APIs</span><div class="sk-bar"><div class="sk-fill" style="--w:92%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-purple">OOP</div><div class="sk-info"><span>OOP Principles</span><div class="sk-bar"><div class="sk-fill" style="--w:93%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-blue">SOLID</div><div class="sk-info"><span>SOLID Principles</span><div class="sk-bar"><div class="sk-fill" style="--w:88%"></div></div><small>Advanced</small></div></div>
+          </div>
+        </div>
+        <!-- DEVOPS -->
+        <div class="skills-panel reveal" id="tab-devops">
+          <div class="skills-grid">
+            <div class="skill-card glass"><div class="sk-icon sk-purple">GIT</div><div class="sk-info"><span>Git / GitHub</span><div class="sk-bar"><div class="sk-fill" style="--w:88%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-blue">SW</div><div class="sk-info"><span>Swagger / OpenAPI</span><div class="sk-bar"><div class="sk-fill" style="--w:88%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-cyan">PM</div><div class="sk-info"><span>Postman</span><div class="sk-bar"><div class="sk-fill" style="--w:90%"></div></div><small>Advanced</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-purple">🐳</div><div class="sk-info"><span>Docker</span><div class="sk-bar"><div class="sk-fill" style="--w:45%"></div></div><small>Basic</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-blue">xU</div><div class="sk-info"><span>xUnit (Testing)</span><div class="sk-bar"><div class="sk-fill" style="--w:68%"></div></div><small>Intermediate</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-blue">SW</div><div class="sk-info"><span>monsterasp.net</span><div class="sk-bar"><div class="sk-fill" style="--w:88%"></div></div><small>Intermediate</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-cyan">CI</div><div class="sk-info"><span>CI/CD Pipelines</span><div class="sk-bar"><div class="sk-fill" style="--w:40%"></div></div><small>Basic</small></div></div>
+          </div>
+        </div>
+        <!-- FRONTEND -->
+        <div class="skills-panel reveal" id="tab-frontend">
+          <div class="skills-grid">
+            <div class="skill-card glass"><div class="sk-icon sk-purple">HTML</div><div class="sk-info"><span>HTML5</span><div class="sk-bar"><div class="sk-fill" style="--w:80%"></div></div><small>Proficient</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-blue">CSS</div><div class="sk-info"><span>CSS3</span><div class="sk-bar"><div class="sk-fill" style="--w:75%"></div></div><small>Proficient</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-purple">BS</div><div class="sk-info"><span>Bootstrap</span><div class="sk-bar"><div class="sk-fill" style="--w:72%"></div></div><small>Proficient</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-blue">TW</div><div class="sk-info"><span>Tailwind CSS</span><div class="sk-bar"><div class="sk-fill" style="--w:68%"></div></div><small>Intermediate</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-cyan">JS</div><div class="sk-info"><span>JavaScript</span><div class="sk-bar"><div class="sk-fill" style="--w:65%"></div></div><small>Intermediate</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-cyan">JS</div><div class="sk-info"><span>TypeScript</span><div class="sk-bar"><div class="sk-fill" style="--w:65%"></div></div><small>Intermediate</small></div></div>
+            <div class="skill-card glass"><div class="sk-icon sk-purple">HTML</div><div class="sk-info"><span>Angular</span><div class="sk-bar"><div class="sk-fill" style="--w:80%"></div></div><small>Intermediate</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── PROJECTS ──────────────── -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-label">03 — What I've Built</div>
+      <h2 class="section-title text-center">Featured <span class="gradient-text">Projects</span></h2>
+      <p class="section-sub text-center">Production-style backend systems built with real-world patterns</p>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1: CompanyHub -->
+        <article class="project-card glass reveal" id="proj-companyhub">
+          <div class="project-header">
+            <div class="project-num">01</div>
+            <div class="project-links">
+              <a href="https://github.com/Mahmoudah25" target="_blank" rel="noopener" class="proj-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.1-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.08 1.84 2.82 1.31 3.51 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">CompanyHub</h3>
+          <p class="project-desc">Multi-tenant B2B SaaS platform built on ASP.NET Core with Clean Architecture (5-layer). Includes tenant management, 2FA (TOTP), API key management, plan-based quota enforcement, and background jobs via Hangfire.</p>
+          <div class="project-features">
+            <span class="feat-tag">Multi-Tenancy</span>
+            <span class="feat-tag">2FA / TOTP</span>
+            <span class="feat-tag">Audit Log</span>
+            <span class="feat-tag">Quota Enforcement</span>
+            <span class="feat-tag">Health Check</span>
+          </div>
+          <div class="project-stack">
+            <span class="stack-badge">ASP.NET Core</span>
+            <span class="stack-badge">Clean Architecture</span>
+            <span class="stack-badge">SQL Server</span>
+            <span class="stack-badge">Redis</span>
+            <span class="stack-badge">Hangfire</span>
+            <span class="stack-badge">SignalR</span>
+            <span class="stack-badge">Paymob</span>
+            <span class="stack-badge">JWT</span>
+          </div>
+          <a href="https://github.com/Mahmoudah25/CompanyHub" target="_blank" rel="noopener" class="project-cta">View on GitHub <span>→</span></a>
+        </article>
+
+        <!-- PROJECT 2: AITravelB -->
+        <article class="project-card glass reveal" id="proj-aitravelb">
+          <div class="project-header">
+            <div class="project-num">02</div>
+            <div class="project-links">
+              <a href="https://github.com/Mahmoudah25" target="_blank" rel="noopener" class="proj-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.1-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.08 1.84 2.82 1.31 3.51 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">AITravelB — AI Travel Trip Planner</h3>
+          <p class="project-desc">Portfolio project simulating a real Agile workflow, built across sprint tickets like a junior dev would receive. Integrates AI trip suggestions, mapping, weather, and payments.</p>
+          <div class="project-features">
+            <span class="feat-tag">Sprint-Based Dev</span>
+            <span class="feat-tag">AI Suggestions (Groq)</span>
+            <span class="feat-tag">Payment Integration</span>
+            <span class="feat-tag">Webhook Handling</span>
+          </div>
+          <div class="project-stack">
+            <span class="stack-badge">Clean Architecture</span>
+            <span class="stack-badge">CQRS / MediatR</span>
+            <span class="stack-badge">EF Core</span>
+            <span class="stack-badge">OpenStreetMap</span>
+            <span class="stack-badge">OpenWeatherMap</span>
+            <span class="stack-badge">Paymob</span>
+          </div>
+          <a href="https://github.com/Mahmoudah25/AITravelB" target="_blank" rel="noopener" class="project-cta">View on GitHub <span>→</span></a>
+        </article>
+
+        <!-- PROJECT 3: ARAM Candles -->
+        <article class="project-card glass reveal" id="proj-aram">
+          <div class="project-header">
+            <div class="project-num">03</div>
+            <div class="project-links">
+              <a href="https://github.com/Mahmoudah25" target="_blank" rel="noopener" class="proj-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.1-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.08 1.84 2.82 1.31 3.51 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">ARAM Candles</h3>
+          <p class="project-desc">End-to-end e-commerce project: vanilla HTML/CSS/JS frontend connected to an ASP.NET Core Web API with SQL Server. Features JWT admin auth, order tracking, review system, and email confirmation.</p>
+          <div class="project-features">
+            <span class="feat-tag">JWT Admin Auth</span>
+            <span class="feat-tag">Order Tracking</span>
+            <span class="feat-tag">Review System</span>
+            <span class="feat-tag">Email Confirmation</span>
+            <span class="feat-tag">Admin Dashboard</span>
+          </div>
+          <div class="project-stack">
+            <span class="stack-badge">ASP.NET Core</span>
+            <span class="stack-badge">SQL Server</span>
+            <span class="stack-badge">JWT</span>
+            <span class="stack-badge">Gmail SMTP</span>
+          </div>
+          <a href="https://github.com/Mahmoudah25" target="_blank" rel="noopener" class="project-cta">View on GitHub <span>→</span></a>
+        </article>
+
+        <!-- PROJECT 4: Image Processing SaaS API -->
+        <article class="project-card glass reveal" id="proj-imgapi">
+          <div class="project-header">
+            <div class="project-num">04</div>
+            <div class="project-links">
+              <a href="https://github.com/Mahmoudah25" target="_blank" rel="noopener" class="proj-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.1-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.08 1.84 2.82 1.31 3.51 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Image Processing SaaS API</h3>
+          <p class="project-desc">Image processing service built with Clean Architecture, supporting paid processing tiers via Paymob and local webhook testing via ngrok.</p>
+          <div class="project-features">
+            <span class="feat-tag">Image Processing</span>
+            <span class="feat-tag">Paid Tiers</span>
+            <span class="feat-tag">Webhook Testing</span>
+          </div>
+          <div class="project-stack">
+            <span class="stack-badge">Clean Architecture</span>
+            <span class="stack-badge">SixLabors.ImageSharp</span>
+            <span class="stack-badge">JWT</span>
+            <span class="stack-badge">Paymob</span>
+            <span class="stack-badge">ngrok</span>
+          </div>
+          <a href="https://github.com/Mahmoudah25/Full-Stack-ImageProcessingSaaS" target="_blank" rel="noopener" class="project-cta">View on GitHub <span>→</span></a>
+        </article>
+
+        <!-- PROJECT 5: HR Management System -->
+        <article class="project-card glass reveal" id="proj-hr">
+          <div class="project-header">
+            <div class="project-num">05</div>
+            <div class="project-links">
+              <a href="https://github.com/Mahmoudah25" target="_blank" rel="noopener" class="proj-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.1-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.08 1.84 2.82 1.31 3.51 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">HR Management System API</h3>
+          <p class="project-desc">RESTful HR Management API featuring employee &amp; role management, secure RBAC, Google OAuth integration, automated email notifications, and deep EF Core with SQL Server integration.</p>
+          <div class="project-features">
+            <span class="feat-tag">Google OAuth</span>
+            <span class="feat-tag">Role-Based Access</span>
+            <span class="feat-tag">Email Notifications</span>
+            <span class="feat-tag">Employee Management</span>
+          </div>
+          <div class="project-stack">
+            <span class="stack-badge">ASP.NET Core</span>
+            <span class="stack-badge">Google OAuth</span>
+            <span class="stack-badge">EF Core</span>
+            <span class="stack-badge">SQL Server</span>
+            <span class="stack-badge">Email</span>
+          </div>
+          <a href="https://github.com/Mahmoudah25/HRSystem" target="_blank" rel="noopener" class="project-cta">View on GitHub <span>→</span></a>
+        </article>
+
+        <!-- PROJECT 6: Social Media Platform API -->
+        <article class="project-card glass reveal" id="proj-social">
+          <div class="project-header">
+            <div class="project-num">06</div>
+            <div class="project-links">
+              <a href="https://github.com/Mahmoudah25" target="_blank" rel="noopener" class="proj-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.1-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.08 1.84 2.82 1.31 3.51 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Social Media Platform API</h3>
+          <p class="project-desc">Scalable ASP.NET Core Social Media API with JWT auth, role management, posts, comments, likes, real-time messaging &amp; notifications via SignalR. Includes report/block systems and auto-expiring stories.</p>
+          <div class="project-features">
+            <span class="feat-tag">Real-time Notifications</span>
+            <span class="feat-tag">Auto-expiring Stories</span>
+            <span class="feat-tag">Block / Report System</span>
+            <span class="feat-tag">Role Management</span>
+          </div>
+          <div class="project-stack">
+            <span class="stack-badge">ASP.NET Core</span>
+            <span class="stack-badge">SignalR</span>
+            <span class="stack-badge">JWT</span>
+            <span class="stack-badge">EF Core</span>
+            <span class="stack-badge">SQL Server</span>
+          </div>
+          <a href="https://github.com/Mahmoudah25/Social_Media" target="_blank" rel="noopener" class="project-cta">View on GitHub <span>→</span></a>
+        </article>
+
+        <!-- PROJECT 7: E-Commerce Platform API -->
+        <article class="project-card glass reveal" id="proj-ecom">
+          <div class="project-header">
+            <div class="project-num">07</div>
+            <div class="project-links">
+              <a href="https://github.com/Mahmoudah25" target="_blank" rel="noopener" class="proj-link" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.1-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.08 1.84 2.82 1.31 3.51 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">E-Commerce Platform API</h3>
+          <p class="project-desc">Full-featured RESTful e-commerce API with product management, user authentication, shopping cart, order processing, secure RBAC, and payment/inventory integration built with EF Core and SQL Server.</p>
+          <div class="project-features">
+            <span class="feat-tag">Shopping Cart</span>
+            <span class="feat-tag">Order Processing</span>
+            <span class="feat-tag">Payment Integration</span>
+            <span class="feat-tag">Inventory Management</span>
+          </div>
+          <div class="project-stack">
+            <span class="stack-badge">ASP.NET Core</span>
+            <span class="stack-badge">EF Core</span>
+            <span class="stack-badge">SQL Server</span>
+            <span class="stack-badge">JWT</span>
+            <span class="stack-badge">REST API</span>
+          </div>
+          <a href="https://github.com/Mahmoudah25/E_Commerce" target="_blank" rel="noopener" class="project-cta">View on GitHub <span>→</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── TIMELINE ──────────────── -->
+  <section class="section timeline-section" id="timeline">
+    <div class="container">
+      <div class="section-label">04 — My Journey</div>
+      <h2 class="section-title text-center">Education &amp; <span class="gradient-text">Experience</span></h2>
+      <div class="timeline">
+
+        <div class="tl-item reveal" id="tl-1">
+          <div class="tl-marker"></div>
+          <div class="tl-card glass">
+            <div class="tl-date">2023 — 2027</div>
+            <div class="tl-badge badge-edu">Education</div>
+            <h3>B.Sc. in Computer Science</h3>
+            <p class="tl-org">El Shorouk Academy · Egypt</p>
+            <p>Built a strong foundation in Computer Science — OOP, Data Structures &amp; Algorithms, Database Systems, Operating Systems, Computer Networks, and Software Engineering.</p>
+            <div class="tl-tags">
+              <span>OOP</span><span>Algorithms</span><span>Databases</span><span>Networks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" id="tl-2">
+          <div class="tl-marker"></div>
+          <div class="tl-card glass">
+            <div class="tl-date">2024 — Present</div>
+            <div class="tl-badge badge-work">DEPI-ITI-Self-Learning</div>
+            <h3>Backend Development with .NET</h3>
+            <p class="tl-org">Self-Learning &amp; Real-World Projects</p>
+            <p>Specialized in C#, ASP.NET Core, Entity Framework Core, SQL Server, RESTful APIs, JWT Auth, Clean Architecture, Repository Pattern, Unit of Work, and Dependency Injection while building production-style applications.</p>
+            <div class="tl-tags">
+              <span>ASP.NET Core</span><span>EF Core</span><span>JWT</span><span>Clean Arch</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" id="tl-3">
+          <div class="tl-marker active"></div>
+          <div class="tl-card glass active-card">
+            <div class="tl-date">2025 — Present</div>
+            <div class="tl-badge badge-now">Now</div>
+            <h3>Building Scalable Backend Systems</h3>
+            <p class="tl-org">Advanced .NET Engineering</p>
+            <p>Developing scalable and maintainable backend systems using Clean Architecture, CQRS with MediatR, SignalR, Hangfire, Redis, Docker, and advanced SQL optimization. Building production-ready APIs and enterprise-level solutions.</p>
+            <div class="tl-tags">
+              <span>CQRS</span><span>MediatR</span><span>Redis</span><span>Docker</span><span>SignalR</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── CONTACT ──────────────── -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-label">05 — Let's Talk</div>
+      <h2 class="section-title text-center">Get In <span class="gradient-text">Touch</span></h2>
+      <p class="section-sub text-center">I'm open to opportunities, collaborations, and interesting projects</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-item glass">
+            <div class="ci-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:Mahmoudandelsamed@gmail.com">Mahmoudandelsamed@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="ci-icon">
+              <i class="fa-solid fa-phone"></i>
+              <!-- 📱 -->
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+201029841714">+20 102 984 1714</a>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="ci-icon">
+              <!-- 📍 -->
+              <i class="fa-solid fa-location-pin"></i>
+            </div>
+            <div>
+              <strong>Location</strong>
+              <span>Egypt 🇪🇬</span>
+            </div>
+          </div>
+          <div class="info-card glass status-card">
+  <div class="info-card-icon">
+    <i class="fa-solid fa-circle-dot status-icon"></i>
+  </div>
+  <div>
+    <strong>Availability Status</strong>
+    <p>Open for Opportunities<br/><small>Available for Full-time & Remote Roles</small></p>
+  </div>
+</div>
+          <div class="social-links">
+            <a href="https://github.com/Mahmoudah25" target="_blank" rel="noopener" class="social-btn" id="gh-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.37.6.1.82-.26.82-.58v-2.17c-3.34.72-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.1-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.08 1.84 2.82 1.31 3.51 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/mahmoud-abdel-samed-9b3b642b7" target="_blank" rel="noopener" class="social-btn" id="li-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .78 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45C23.21 24 24 23.22 24 22.27V1.73C24 .78 23.21 0 22.22 0z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://x.com/MahmoudAbd708" target="_blank" rel="noopener" class="social-btn" id="x-link" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              X / Twitter
+            </a>
+            <a href="https://www.instagram.com/ma7moud_samed" target="_blank" rel="noopener" class="social-btn" id="ig-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              Instagram
+            </a>
+          </div>
+          
+        </div>
+
+        <form class="contact-form glass reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="form-name">Name</label>
+            <input type="text" id="form-name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="form-email">Email</label>
+            <input type="email" id="form-email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="form-subject">Subject</label>
+            <input type="text" id="form-subject" name="subject" placeholder="What's this about?" required />
+          </div>
+          <div class="form-group">
+            <label for="form-message">Message</label>
+            <textarea id="form-message" name="message" rows="5" placeholder="Tell me more..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full" id="form-submit">
+            <span class="btn-text">Send Message 
+            </span>
+              <i class="fa-solid fa-envelope"></i>
+
+            <span class="btn-icon"></span>
+          </button>
+          <div class="form-feedback" id="formFeedback"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── FOOTER ──────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="nav-logo">M<span>.</span></span>
+          <p>Mahmoud Abdel-Samed</p>
+          <small>Back-End .NET Developer</small>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#timeline">Journey</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-copy">
+          <p>© 2026 Mahmoud Abdel-Samed. All rights reserved.</p>
+          <a href="assets/CV/MahmoudA25.pdf" download class="btn-ghost btn-sm">Download CV <i class="fa-solid fa-download"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
