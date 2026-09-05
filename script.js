@@ -311,3 +311,51 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     });
   });
 })();
+
+
+// Form Spree
+const contactForm = document.getElementById('contactForm');
+const formFeedback = document.getElementById('formFeedback');
+const submitBtn = document.getElementById('form-submit');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+
+    // UI: loading state
+    submitBtn.disabled = true;
+    submitBtn.classList.add('loading');
+    formFeedback.textContent = '';
+    formFeedback.className = 'form-feedback';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        formFeedback.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+        formFeedback.classList.add('success');
+        contactForm.reset();
+      } else {
+        const data = await response.json();
+        if (data.errors) {
+          formFeedback.textContent = data.errors.map(err => err.message).join(', ');
+        } else {
+          formFeedback.textContent = 'Something went wrong. Please try again.';
+        }
+        formFeedback.classList.add('error');
+      }
+    } catch (error) {
+      formFeedback.textContent = 'Network error. Please check your connection and try again.';
+      formFeedback.classList.add('error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('loading');
+    }
+  });
+}

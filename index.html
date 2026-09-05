@@ -64,7 +64,7 @@
     <div class="hero-visual">
       <div class="avatar-ring">
         <div class="avatar-inner">
-          <img src="assets/images/me.jpeg" alt="Mahmoud Abdel-Samed" class="avatar-photo" />
+          <img src="assets/images/me-Formal.jpeg" alt="Mahmoud Abdel-Samed" class="avatar-photo" />
         </div>
         <div class="orbit orbit-1"><div class="orbit-dot dot-c"></div></div>
         <div class="orbit orbit-2"><div class="orbit-dot dot-js"></div></div>
@@ -589,7 +589,8 @@
           
         </div>
 
-        <form class="contact-form glass reveal" id="contactForm" novalidate>
+        <form class="contact-form glass reveal" id="contactForm" action="https://formspree.io/f/xljeldaj" method="post" novalidate>
+            <input type="hidden" name="_subject" value="New Portfolio Contact" />
           <div class="form-group">
             <label for="form-name">Name</label>
             <input type="text" id="form-name" name="name" placeholder="Your full name" required />
@@ -606,6 +607,7 @@
             <label for="form-message">Message</label>
             <textarea id="form-message" name="message" rows="5" placeholder="Tell me more..." required></textarea>
           </div>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <button type="submit" class="btn-primary btn-full" id="form-submit">
             <span class="btn-text">Send Message 
             </span>
