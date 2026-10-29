@@ -631,20 +631,58 @@ color: var(--text);
    PROJECTS
    ═══════════════════════════════════════════════════════════ */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 18px;
+  --gap: 18px;
+  display: flex;
+  gap: var(--gap);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* padding عشان الـ hover (translateY) والـ glow ما يتقصوش */
+  padding: 12px 4px 24px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue) transparent;
 }
+.projects-grid::-webkit-scrollbar { height: 6px; }
+.projects-grid::-webkit-scrollbar-track { background: transparent; }
+.projects-grid::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
 
 .project-card {
+  flex: 0 0 calc((100% - 2 * var(--gap)) / 3);
+  scroll-snap-align: start;
+  min-width: 0;
+
   padding: 22px;
-  transition: transform 0.3s var(--ease);
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: transform 0.3s var(--ease);
 }
 .project-card:hover { transform: translateY(-6px); }
+.project-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+}
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease);
+}
+.project-card:hover .project-img img { transform: scale(1.06); }
 
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .project-card { flex-basis: calc((100% - var(--gap)) / 2); } /* 2 كروت */
+}
+@media (max-width: 640px) {
+  .project-card { flex-basis: 85%; } /* كارت واحد + لمحة من اللي بعده */
+}
 .project-header {
   display: flex;
   align-items: center;
@@ -907,3 +945,11 @@ color: var(--text);
 .footer-copy p { font-size: 0.78rem; color: var(--text-3); margin-bottom: 8px; }
 
 
+/* Translate */
+.proj-nav { display: flex; justify-content: center; gap: 12px; margin-top: 8px; }
+.proj-nav button {
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 1px solid var(--border); color: var(--text);
+  transition: all 0.2s;
+}
+.proj-nav button:hover { border-color: var(--blue); background: rgba(30,144,255,0.1); }

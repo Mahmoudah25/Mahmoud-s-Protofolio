@@ -345,3 +345,10 @@ if (contactForm) {
     }
   });
 }
+
+
+// translate project cards
+const grid = document.querySelector('.projects-grid');
+const step = () => grid.querySelector('.project-card').offsetWidth + 18;
+document.getElementById('projNext').onclick = () => grid.scrollBy({ left: step(), behavior: 'smooth' });
+document.getElementById('projPrev').onclick = () => grid.scrollBy({ left: -step(), behavior: 'smooth' });
